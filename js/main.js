@@ -9,4 +9,4 @@ document.querySelector('input[type=checkbox]').addEventListener('change', functi
   }
 });
 $('form').validate();
-$('#phone').mask("+7(999)999-9999", {autoclear: false});
+$('#phone').mask("+7(999)999-99-99", {autoclear: false});
