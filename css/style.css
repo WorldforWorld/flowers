@@ -76,6 +76,7 @@ body{
   padding-right: 59px;
 }
 .input-group {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -87,11 +88,16 @@ body{
   border: 1px solid #EEEEEE;
   border-radius: 1px;
   line-height: 36px;
+  transition: 0.5s;
+}
+.input:focus {
+  border: 1px solid #EA137A;
 }
 .policy {
   margin-top: -20px;
   margin-bottom: 19px;
 }
+
 /* style text */
 
 .title {
@@ -130,19 +136,22 @@ body{
 .personal {
   color: #DCDD44;
   text-decoration: none;
+  transition: 0.5s;
 }
+
+
 .policy__checkbox {
   opacity: 0;
   visibility: hidden;
 }
 .policy__checkbox:checked ~ .policy__label:before{
-  background: #EA137A;
+  background: #EA137A url('../img/check.svg') no-repeat center / 0.8rem
 }
 .policy__label:before {
   content: '';
   width: 12px;
   height: 12px;
-  border: 1px solid #EA137A;
+  background: #EA137A;
   border-radius: 1px;
   cursor: pointer;
   margin-right: 9px;
@@ -156,9 +165,28 @@ body{
   letter-spacing: 0px;
   color: #FFFFFF;
   cursor: pointer;
+  transition: 0.5s;
 }
 
+label#phone-error.error {
+  top: 0px;
+  position: absolute;
+  left: 72px;
+  color: #EA137A;
+}
 /* Media queries  */
+
+@media screen and ( min-width:  991px) {
+  .personal:hover {
+    color: #EA137A;
+  }
+  .personal:active {
+    color: #DCDD44;
+  }
+  .button-active:hover {
+    background: #cf126d !important;
+  }
+}
 @media screen and ( max-width:  643px) {
   .container {
     padding-left: 20px;
