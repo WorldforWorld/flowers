@@ -1,0 +1,228 @@
+/* Fonts */
+@font-face {
+  font-family: 'Arial Regular';
+  src: url('../fonts/Arial-Regular.woff2') format('woff2'),
+      url('../fonts/Arial-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Arial Bold';
+  src: url('../fonts/Arial-Bold.woff2') format('woff2'),
+      url('../fonts/Arial-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+/* style */
+* {
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  background: #FAFAFA;
+  font-family: 'Arial Regular';
+  margin: 0;
+  font-size: 12px;
+}
+.modal {
+  position: relative;
+  background: url('../img/people-bg.png') no-repeat center;
+  max-width: 625px;
+  height: 100vh;
+  max-height: 951px;
+  margin: 10px;
+}
+.close-btn {
+  position: absolute;
+  top: 27px;
+  right: 40px;
+}
+.close-btn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  transform: rotate(45deg);
+  background: #888888;
+  opacity: 0.5
+}
+.close-btn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  transform: rotate(-45deg);
+  background: #888888;
+  opacity: 0.5
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 65px;
+}
+.form {
+  width: 100%;
+  padding-left: 59px;
+  padding-right: 59px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.input {
+  padding-left: 10px;
+  outline: none;
+  background: #F7F7F7;
+  border: 1px solid #EEEEEE;
+  border-radius: 1px;
+  line-height: 36px;
+}
+.policy {
+  margin-top: 20px;
+  margin-bottom: 19px;
+}
+/* style text */
+
+.title {
+  display: block;
+  text-align: center;
+  margin-bottom: 21px;
+  font-family: 'Arial Bold';
+  font-size: 26px;
+  letter-spacing: 0px;
+  color: #444444
+}
+.subtitle {
+  display: block;
+  text-align: center;
+  max-width: 432px;
+  margin-bottom: 40px;
+  font-family: 'Arial Regular';
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px
+}
+.subtitle--color {
+  color: #EA137A;
+}
+.label {
+  margin-bottom: 7px;
+  letter-spacing: 0px;
+  color: #888888;
+}
+.policy__label {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0px;
+  color: #888888;
+}
+.personal {
+  color: #DCDD44;
+  text-decoration: none;
+}
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden;
+}
+.policy__checkbox:checked ~ .policy__label:before{
+  background: #EA137A;
+}
+.policy__label:before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EA137A;
+  border-radius: 1px;
+  cursor: pointer;
+  margin-right: 9px;
+}
+.button {
+  padding: 13px 21px 10px 25px;
+  border: none;
+  outline: none;
+  background: #DEDFE0;
+  border-radius: 1px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* Media queries  */
+@media screen and ( max-width:  643px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and ( max-width:  529px) {
+  .title {
+    font-size: 22px;
+  }
+  .form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and ( max-width:  405px) {
+  .container {
+    padding-top: 42px
+  }
+}
+@media screen and ( max-width:  355px) {
+  .close-btn {
+    top: 19px;
+    right: 30px;
+  }
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and ( max-width:  348px) {
+  .subtitle {
+    margin-bottom: 23px;
+  }
+}
+@media screen and ( max-width:  335px) {
+  .modal {
+    margin: 5px;
+  }
+}
+@media screen and ( max-width:  335px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+@media screen and ( max-height:  478px) {
+  .container {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and ( max-height:  448px) {
+  .title {
+    margin-bottom: 2px
+  }
+  .subtitle {
+    margin-bottom: 7px;
+  }
+  .input-group {
+    margin-bottom: 10px
+  }
+  .policy {
+    margin-top: -21px;
+    margin-bottom: 8px;
+  }
+}
